@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[84]:
+# In[7]:
 
 
 # Import modules
@@ -39,6 +39,7 @@ var_net=nc_vars[5]
 lons = nc_fid.variables[lons_net][:]
 lats = nc_fid.variables[lats_net][:]
 time = nc_fid.variables[time_net][:]
+var_units=nc_fid.variables[var_net].units
 time_units = nc_fid.variables[time_net].units
 time_calendar = nc_fid.variables[time_net].calendar
 
@@ -50,9 +51,12 @@ atas = nc_fid.variables[var_net][:]
 # Time conversion
 
 time_py = num2date(time,time_units,time_calendar)
-print(time_py)
+print("Python time:\n", time_py)
 time_index=1
 
+# Close file
+
+nc_fid.close()
 
 # Map domain setting
 
@@ -72,12 +76,9 @@ cs = map.contourf(lon2d, lat2d, atas[time_index, :, :], 11, cmap=plt.cm.Spectral
 
 map.drawcoastlines()
 cbar = plt.colorbar(cs, orientation='horizontal', shrink=0.5)
-cbar.set_label("%s (%s)" % (nc_fid.variables[var_net].long_name,                            nc_fid.variables[var_net].units))
-plt.title("%s on %s" % (nc_fid.variables[var_net].long_name, time_py[time_index]))
+cbar.set_label("Surface air temp. anomaly (%s)" % (var_units))
+plt.title("Surface air temp. anomaly on %s" % (time_py[time_index]))
 plt.show()
 fig.savefig(output_image_name)
 
-# Close file
-
-nc_fid.close()
 

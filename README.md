@@ -6,4 +6,6 @@
 
 3. Script1_filtered_checklags_final_singlelag_CORRECT.m was MATLAB code to analyse how well a hydrological model was performing in relation to producing runoff values that matched observations. (2016).
 
-4. reader_contourmap_maker.py was Python code to read NetCDF data and visualise it as a contour map. (2018).
+4. Contour map.py was Python code to read NetCDF scalar data (e.g. temp.) and visualise it as a contour map. (2018).
+
+5. Wind barb.py was Python code to read NetCDF vector (e.g wind) data and visualise it barbs. (2018)
