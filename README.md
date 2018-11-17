@@ -8,4 +8,4 @@
 
 4. Contour map.py was Python code to read NetCDF scalar data (e.g. temp.) and visualise it as a contour map. (2018).
 
-5. Wind barb.py was Python code to read NetCDF vector (e.g wind) data and visualise it barbs. (2018)
+5. Wind barb.py was Python code to read NetCDF vector data (e.g wind) and visualise it barbs. (2018).
