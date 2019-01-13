@@ -9,3 +9,5 @@
 4. Contour map.py was Python code to read NetCDF scalar data (e.g. temp.) and visualise it as a contour map. (2018).
 
 5. Wind barb.py was Python code to read NetCDF vector data (e.g wind) and visualise it barbs. (2018).
+
+6. frost_counter.py was Python code that analysed ERA-INTERIM data. It counted the number of frost periods across a multi-decadal period based on various thresholds. (2019).
